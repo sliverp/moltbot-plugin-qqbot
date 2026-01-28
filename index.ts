@@ -3,7 +3,7 @@ import { qqBotPlugin } from "./src/channel.js";
 import { setQQBotRuntime } from "./src/runtime.js";
 
 const plugin = {
-  id: "qqbot",
+  id: "moltbot-plugin-qqbot",
   name: "QQ Bot Plugin",
   description: "QQ Bot (官方机器人) integration for Moltbot using Webhook",
   configSchema: {
