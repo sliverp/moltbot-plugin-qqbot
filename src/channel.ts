@@ -8,9 +8,13 @@ import {
 } from "./config.js";
 import { qqBotOutboundAdapter } from "./outbound.js";
 import { startQQBotWebhook, stopQQBotWebhook } from "./webhook.js";
+import { qqBotOnboardingAdapter } from "./onboarding.js";
 
 export const qqBotPlugin: ChannelPlugin<ResolvedQQBotAccount> = {
   id: "qqbot",
+  
+  // Onboarding 配置向导
+  onboarding: qqBotOnboardingAdapter,
   
   // 元数据
   meta: {
