@@ -1,0 +1,52 @@
+{
+  "name": "moltbot-plugin-qqbot",
+  "version": "1.0.0",
+  "description": "QQ Bot channel plugin for Moltbot - Webhook-based integration for QQ official bot platform",
+  "main": "index.ts",
+  "type": "module",
+  "clawdbot": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "files": [
+    "index.ts",
+    "src/",
+    "moltbot.plugin.json",
+    "clawdbot.plugin.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": [
+    "moltbot",
+    "moltbot-plugin",
+    "channel",
+    "qq",
+    "qqbot",
+    "qq-bot",
+    "tencent",
+    "webhook"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/moltbot-plugin-qqbot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/moltbot-plugin-qqbot/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/moltbot-plugin-qqbot#readme",
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "moltbot": "*"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

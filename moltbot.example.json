@@ -1,0 +1,47 @@
+# 示例配置文件
+# 将此文件复制到你的 moltbot 工作目录，并重命名为 moltbot.json
+
+{
+  # ==================== 插件配置 ====================
+  "plugins": {
+    "enabled": true,
+    "load": {
+      # 从 npm 加载插件（推荐）
+      "npm": ["moltbot-plugin-qqbot"]
+      
+      # 或从本地路径加载
+      # "paths": ["./moltbot-plugin-qqbot"]
+    }
+  },
+
+  # ==================== QQ Bot Channel 配置 ====================
+  "channels": {
+    "qqbot": {
+      # 启用 channel
+      "enabled": true,
+      
+      # QQ Bot 凭证（必需）
+      "appId": "YOUR_BOT_APPID",        # 从 QQ 开放平台获取
+      "appSecret": "YOUR_APP_SECRET",   # 机器人密钥（用于API调用和Webhook签名）
+      
+      # Webhook 服务器配置（必需）
+      "webhookPort": 8080,                # 监听端口
+      "webhookPath": "/qqbot/webhook",    # Webhook 路径
+      "webhookHost": "0.0.0.0",           # 绑定地址
+      
+      # DM 访问控制（可选）
+      "dmPolicy": "pairing",              # open | pairing | allowlist
+      "allowFrom": [],                     # dmPolicy=allowlist 时的白名单
+      
+      # 群组策略（可选）
+      "groups": {
+        "*": {
+          "requireMention": true          # 群聊中是否需要 @机器人
+        }
+      }
+    }
+  },
+
+  # ==================== 其他 Moltbot 配置 ====================
+  # 根据需要添加其他配置...
+}

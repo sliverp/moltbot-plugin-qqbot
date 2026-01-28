@@ -1,0 +1,32 @@
+{
+  "id": "moltbot-plugin-qqbot",
+  "channels": [
+    "qqbot"
+  ],
+  "name": "QQ Bot Plugin",
+  "version": "1.0.0",
+  "description": "QQ Bot (官方机器人) integration for Clawdbot using Webhook",
+  "author": "Moltbot Community",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "debug": {
+        "type": "boolean",
+        "description": "Enable debug logging",
+        "default": false
+      }
+    }
+  },
+  "moltbot": {
+    "channel": {
+      "id": "qqbot",
+      "label": "QQ Bot",
+      "selectionLabel": "QQ Bot (官方机器人 Webhook)",
+      "docsPath": "/channels/qqbot",
+      "docsLabel": "qqbot",
+      "blurb": "QQ官方机器人平台，使用Webhook接收消息，支持单聊、群聊和频道",
+      "order": 50,
+      "aliases": ["qq", "qq-bot"]
+    }
+  }
+}

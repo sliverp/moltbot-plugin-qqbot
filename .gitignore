@@ -1,0 +1,32 @@
+node_modules/
+dist/
+*.log
+*.tgz
+.DS_Store
+.env
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+coverage/
+.nyc_output/
+test-results/
+
+# Build outputs
+*.js.map
+*.d.ts.map
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp files
+*.tmp
+temp/
+tmp/

@@ -1,0 +1,13 @@
+*.tgz
+node_modules/
+dist/
+src/
+tsconfig.json
+.github/
+.vscode/
+.git/
+*.log
+test/
+tests/
+examples/
+docs/
