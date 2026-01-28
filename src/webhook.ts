@@ -78,8 +78,16 @@ export async function startQQBotWebhook(
     });
   });
   
+  server.on("error", (error: NodeJS.ErrnoException) => {
+    console.error(`[qqbot] Webhook server error for ${account.id}:`, error);
+    if (error.code === "EADDRINUSE") {
+      console.error(`[qqbot] Port ${port} is already in use!`);
+    }
+    activeServers.delete(account.id);
+  });
+  
   server.listen(port, () => {
-    console.log(`[qqbot] Webhook server started on port ${port}, path ${path}`);
+    console.log(`[qqbot] Webhook server started on port ${port}, path ${path} for account ${account.id}`);
   });
   
   activeServers.set(account.id, server);
